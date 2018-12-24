@@ -1,0 +1,589 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://gui_main.tres" type="Theme" id=1]
+[ext_resource path="res://font/swisscl.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprite/btn_mini_freccia_su.png" type="Texture" id=3]
+[ext_resource path="res://sprite/btn_elimina.png" type="Texture" id=4]
+
+[sub_resource type="GDScript" id=1]
+
+resource_name = "voce_aggiungi_pietra"
+script/source = "#voce_aggiungi_pietra
+
+extends HBoxContainer
+
+func _ready():
+	var op_pietra = get_node(\"op_pietra\")
+	op_pietra.clear()
+	
+	for nome_e_val in dati.diz_preventivi_prezzi[\"pietre\"]:
+		op_pietra.add_item(nome_e_val[0],op_pietra.get_item_count())
+	op_pietra.connect(\"item_selected\",self,\"_pietra_selez\")
+
+func _pietra_selez(boh):
+	aggiorna_preventivo()
+
+func aggiorna_preventivo():
+	dati.fin_preventivo.compila_box_preventivo(\"ciao\")"
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 18
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.133333, 0.243137, 0.4, 0.0980392 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.156863, 0.156863, 0.156863, 0.862745 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.156863, 0.156863, 0.156863, 0.156863 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="StyleBoxFlat" id=7]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.640625, 0.640625, 0.640625, 0.862745 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="StyleBoxFlat" id=8]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.925781, 0.838989, 0.838989, 0.535529 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = true
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFont" id=9]
+
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=10]
+
+default_font = SubResource( 9 )
+Button/colors/font_color = Color( 0.894531, 0.894531, 0.894531, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = SubResource( 5 )
+Button/styles/hover = SubResource( 5 )
+Button/styles/normal = SubResource( 6 )
+Button/styles/pressed = SubResource( 7 )
+OptionButton/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+OptionButton/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+OptionButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+OptionButton/constants/arrow_margin = 2
+OptionButton/constants/hseparation = 2
+OptionButton/fonts/font = null
+OptionButton/icons/arrow = null
+OptionButton/styles/disabled = null
+OptionButton/styles/focus = SubResource( 5 )
+OptionButton/styles/hover = SubResource( 5 )
+OptionButton/styles/normal = SubResource( 6 )
+OptionButton/styles/pressed = SubResource( 7 )
+PopupMenu/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
+PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
+PopupMenu/colors/font_color_hover = Color( 0.878431, 0.878431, 0.878431, 1 )
+PopupMenu/constants/hseparation = 4
+PopupMenu/constants/vseparation = 4
+PopupMenu/fonts/font = null
+PopupMenu/icons/checked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = SubResource( 5 )
+PopupMenu/styles/panel = null
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+PopupPanel/styles/panel = SubResource( 8 )
+
+[sub_resource type="DynamicFont" id=11]
+
+size = 8
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="GDScript" id=12]
+
+script/source = "#btn_mini_freccia_su
+
+extends Button
+
+onready var ed_quantita = get_node(\"../../ed_quantita\")
+
+func _ready():
+	connect(\"pressed\",self,\"_btn_click\")
+
+func _btn_click():
+	ed_quantita.set_text(str(int(ed_quantita.get_text())+1))
+	
+	get_node(\"../..\").aggiorna_preventivo()"
+
+[sub_resource type="GDScript" id=13]
+
+script/source = "#btn_mini_freccia_giu
+
+extends Button
+
+onready var ed_quantita = get_node(\"../../ed_quantita\")
+
+
+func _ready():
+	connect(\"pressed\",self,\"_btn_click\")
+
+func _btn_click():
+	var quantita = int(ed_quantita.get_text())
+	
+	if quantita > 1: 	ed_quantita.set_text(str(quantita-1))
+	else:				ed_quantita.set_text(\"1\")
+	
+	get_node(\"../..\").aggiorna_preventivo()"
+
+[sub_resource type="Theme" id=14]
+
+default_font = SubResource( 9 )
+Button/colors/font_color = Color( 0.894531, 0.894531, 0.894531, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = SubResource( 5 )
+Button/styles/hover = SubResource( 5 )
+Button/styles/normal = SubResource( 6 )
+Button/styles/pressed = SubResource( 7 )
+OptionButton/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+OptionButton/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+OptionButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+OptionButton/constants/arrow_margin = 2
+OptionButton/constants/hseparation = 2
+OptionButton/fonts/font = null
+OptionButton/icons/arrow = null
+OptionButton/styles/disabled = null
+OptionButton/styles/focus = SubResource( 5 )
+OptionButton/styles/hover = SubResource( 5 )
+OptionButton/styles/normal = SubResource( 6 )
+OptionButton/styles/pressed = SubResource( 7 )
+PopupMenu/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
+PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
+PopupMenu/colors/font_color_hover = Color( 0.878431, 0.878431, 0.878431, 1 )
+PopupMenu/constants/hseparation = 4
+PopupMenu/constants/vseparation = 4
+PopupMenu/fonts/font = null
+PopupMenu/icons/checked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = SubResource( 5 )
+PopupMenu/styles/panel = null
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+PopupPanel/styles/panel = SubResource( 8 )
+
+[sub_resource type="DynamicFont" id=15]
+
+size = 15
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="GDScript" id=16]
+
+script/source = "#btn_elimina_pietra
+
+extends Button
+
+
+func _ready():
+	connect(\"pressed\",self,\"_btn_click\")
+
+func _btn_click():
+	var n_scr_pietre = get_node(\"../../..\")
+	var vbox_pietre  = get_node(\"../..\")
+	var num_figli    = vbox_pietre.get_child_count()
+	
+	if num_figli <= 1:
+		n_scr_pietre.set_v_size_flags(0)
+		n_scr_pietre.hide()
+	get_node(\"../ed_quantita\").set_text(\"0\")
+	get_parent().aggiorna_preventivo()
+	get_node(\"..\").queue_free()"
+
+[node name="aggiungi_pietra" type="HBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 29.0
+margin_right = 216.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/separation = 2
+alignment = 0
+script = SubResource( 1 )
+
+[node name="op_pietra" type="OptionButton" parent="."]
+
+show_behind_parent = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 210.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 210, 25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 3.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.133333, 0.243137, 0.4, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+
+[node name="ed_quantita" type="LineEdit" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 212.0
+margin_right = 260.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/read_only = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/selection_color = Color( 1, 1, 1, 1 )
+custom_colors/cursor_color = Color( 0.133333, 0.243137, 0.4, 1 )
+custom_colors/font_color = Color( 0.133333, 0.243137, 0.4, 1 )
+text = "0"
+align = 1
+focus_mode = 2
+placeholder_text = "valore"
+placeholder_alpha = 0.3
+caret_blink = false
+caret_blink_speed = 0.65
+context_menu_enabled = true
+
+[node name="cnt_frecce" type="VBoxContainer" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 262.0
+margin_right = 287.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 25, 25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/separation = 1
+alignment = 0
+
+[node name="btn_freccia_su" type="Button" parent="cnt_frecce"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 25.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 25, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0.133333, 0.243137, 0.4, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+script = SubResource( 12 )
+
+[node name="ico" type="TextureRect" parent="cnt_frecce/btn_freccia_su"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 6.0
+margin_top = 3.0
+margin_right = 31.0
+margin_bottom = 16.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="btn_freccia_giu" type="Button" parent="cnt_frecce"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 13.0
+margin_right = 25.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 25, 12 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0.133333, 0.243137, 0.4, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+script = SubResource( 13 )
+
+[node name="ico" type="TextureRect" parent="cnt_frecce/btn_freccia_giu"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 18.0
+margin_top = 9.0
+margin_right = 43.0
+margin_bottom = 22.0
+rect_rotation = 180.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="btn_elimina" type="Button" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 289.0
+margin_right = 314.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 25, 25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource( 14 )
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0.133333, 0.243137, 0.4, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+script = SubResource( 16 )
+
+[node name="ico" type="TextureRect" parent="btn_elimina"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 25.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 4 )
+stretch_mode = 0
+
+[node name="Container" type="Container" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 316.0
+margin_right = 316.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+
+

@@ -1,0 +1,767 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://font/swisscl.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://sprite/cont_ico_10.png" type="Texture" id=2]
+[ext_resource path="res://sprite/contab_cash.png" type="Texture" id=3]
+[ext_resource path="res://sprite/btn_elimina.png" type="Texture" id=4]
+[ext_resource path="res://sprite/btn_elimina_hover.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.585938, 0.585938, 0.585938, 0.862745 )
+draw_center = true
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.949219, 0.0889893, 0.0889893, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.156863, 0.156863, 0.156863, 0.156863 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.640625, 0.640625, 0.640625, 0.862745 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.925781, 0.838989, 0.838989, 0.535529 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = true
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=6]
+
+default_font = SubResource( 5 )
+Button/colors/font_color = Color( 0.894531, 0.894531, 0.894531, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = SubResource( 1 )
+Button/styles/hover = SubResource( 1 )
+Button/styles/normal = SubResource( 2 )
+Button/styles/pressed = SubResource( 3 )
+OptionButton/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+OptionButton/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+OptionButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+OptionButton/constants/arrow_margin = 2
+OptionButton/constants/hseparation = 2
+OptionButton/fonts/font = null
+OptionButton/icons/arrow = null
+OptionButton/styles/disabled = null
+OptionButton/styles/focus = SubResource( 1 )
+OptionButton/styles/hover = SubResource( 1 )
+OptionButton/styles/normal = SubResource( 2 )
+OptionButton/styles/pressed = SubResource( 3 )
+PopupMenu/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
+PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
+PopupMenu/colors/font_color_hover = Color( 0.878431, 0.878431, 0.878431, 1 )
+PopupMenu/constants/hseparation = 4
+PopupMenu/constants/vseparation = 4
+PopupMenu/fonts/font = null
+PopupMenu/icons/checked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = SubResource( 1 )
+PopupMenu/styles/panel = null
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+PopupPanel/styles/panel = SubResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+
+[sub_resource type="GDScript" id=8]
+
+resource_name = "btn_voce_contabilita"
+script/source = "#btn_voce_contabilita
+
+extends Button
+
+var n_op     = 1
+var val      = 0
+var id_op    = 10
+var data     = 0
+var descriz  = \"\"
+var contanti = true
+
+func _ready():
+	connect(\"pressed\",self,\"_btn_click\")
+	popola_voce()
+
+func _btn_click():
+	dati.fin_contabilita.apri_modifica_voce(n_op)
+
+func popola_voce():
+	var n_voce = dati.diz_contabilita[n_op-1][0]
+	
+	if n_op != n_voce:
+		prints(\"LISTA CONTABILITA': Voce contabilità ID array =\",n_op-1,\"diverso da N° op =\",n_voce)
+		return
+	$hbox/lb_num.text = str(n_op)
+	
+	$hbox/btn_canc.visible = false
+	if n_op == dati.diz_contabilita.size():
+		$hbox/btn_canc.visible = true
+	
+	var diz_op = dati.diz_contabilita[n_op-1][1]
+
+	var ico_cont = load(str(\"res://sprite/cont_ico_\",id_op,\".png\"))
+	$hbox/ico.texture = ico_cont
+
+	var ico_cash
+	if contanti: ico_cash = load(\"res://sprite/contab_cash.png\")
+	else:        ico_cash = load(\"res://sprite/contab_card.png\")
+	$hbox/ico_cash.texture = ico_cash
+
+	$hbox/lb_val.text   = utl.rendi_decimale2str(val)
+	$hbox/lb_descr.text = descriz
+
+	$hbox/btn_cliente.hide()
+	if diz_op[\"cliente\"] != \"\":
+		$hbox/btn_cliente.show()
+		$hbox/btn_cliente/nome.text = diz_op[\"cliente\"]
+
+	var diz_data = OS.get_datetime_from_unix_time(data)
+	$hbox/lb_data.text = str(diz_data[\"day\"],\"-\",diz_data[\"month\"],\"-\",diz_data[\"year\"])
+"
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="DynamicFont" id=9]
+
+size = 16
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.133333, 0.243137, 0.4, 0.235294 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFont" id=11]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+
+[sub_resource type="GDScript" id=12]
+
+resource_name = "btn_cliente_voce_contabilita"
+script/source = "#btn_cliente_voce_contabilita
+
+extends Button
+
+func _ready():
+	connect(\"pressed\",self,\"_btn_click\")
+
+func _btn_click():
+	if dati.diz_contatti.has($nome.text):
+		dati.fin_rubrica.compila_pannello_note($nome.text)
+		dati.main.mostra_fin(1)
+	else:
+		prints(\"CONTABILITA: link nome (\",$nome.text,\") non presente in dati.diz_contatti\")"
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="DynamicFont" id=13]
+
+size = 16
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="GDScript" id=14]
+
+script/source = "#btn_cancella_preventivo
+
+extends TextureButton
+
+func _ready():
+	connect(\"pressed\",self,\"_btn_click\")
+
+func _btn_click():
+	visible = false
+	get_node(\"../btn_ok\").show()
+	get_node(\"../btn_annulla\").show()
+
+func elimina_voce():
+	if get_node(\"../btn_cliente\").visible: #significa che è una voce con cliente
+		var n_voce  = get_node(\"../..\").n_op
+		var cliente = get_node(\"../btn_cliente/nome\").text
+		if dati.diz_contatti[cliente].has(\"acqu_effett\"):
+			if n_voce in dati.diz_contatti[cliente][\"acqu_effett\"]:
+				dati.diz_contatti[cliente][\"acqu_effett\"].erase(n_voce)
+				dati.salva_dati(\"rubrica\")
+	
+	dati.diz_contabilita.pop_back()
+	dati.salva_dati(\"contabilita\")
+	dati.fin_contabilita.calcola_saldo()
+	dati.fin_contabilita.aggiorna_lista_contabilita()"
+
+[sub_resource type="StreamTexture" id=15]
+
+flags = 8
+load_path = "res://.import/btn_salva.png-e1c7e0798b342083c20d397fdff8cae0.stex"
+
+[sub_resource type="StreamTexture" id=16]
+
+flags = 8
+load_path = "res://.import/btn_salva_hover.png-89fe94f2bf9150fa0c42046e601d5f52.stex"
+
+[sub_resource type="GDScript" id=17]
+
+resource_name = "btn_ok_cancella_preventivo"
+script/source = "#btn_ok_cancella_preventivo
+
+extends TextureButton
+
+func _ready():
+	visible = false
+	connect(\"pressed\",self,\"_btn_click\")
+
+func _btn_click():
+	visible = false
+	get_node(\"../btn_annulla\").hide()
+	get_node(\"../btn_canc\").show()
+	get_node(\"../btn_canc\").elimina_voce()"
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="StreamTexture" id=18]
+
+flags = 8
+load_path = "res://.import/btn_annulla.png-45b300315b7325e32f9b9aff441a24ee.stex"
+
+[sub_resource type="StreamTexture" id=19]
+
+flags = 8
+load_path = "res://.import/btn_annulla_hover.png-db125b6e92d83e7156c5f6bc5d8f8f23.stex"
+
+[sub_resource type="GDScript" id=20]
+
+resource_name = "btn_annulla_cancella_preventivo"
+script/source = "#btn_annulla_cancella_preventivo
+
+extends TextureButton
+
+func _ready():
+	visible = false
+	connect(\"pressed\",self,\"_btn_click\")
+
+func _btn_click():
+	visible = false
+	get_node(\"../btn_ok\").hide()
+	get_node(\"../btn_canc\").show()"
+_sections_unfolded = [ "Resource" ]
+
+[node name="voce_contabilita" type="Button" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 667.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 150, 25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+clip_text = true
+align = 0
+script = SubResource( 8 )
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="hbox" type="HBoxContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -5.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource( 6 )
+alignment = 0
+
+[node name="lb_num" type="Label" parent="hbox" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 45.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 45, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.133333, 0.243137, 0.4, 1 )
+text = "10023"
+align = 2
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="sep1" type="VSeparator" parent="hbox" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 49.0
+margin_right = 53.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="ico" type="TextureRect" parent="hbox" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 57.0
+margin_right = 82.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 15, 15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+texture = ExtResource( 2 )
+stretch_mode = 0
+_sections_unfolded = [ "Mouse" ]
+
+[node name="ico_cash" type="TextureRect" parent="hbox" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 86.0
+margin_right = 111.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 15, 15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+texture = ExtResource( 3 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="sep2" type="VSeparator" parent="hbox" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 115.0
+margin_right = 119.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="lb_data" type="Label" parent="hbox" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 123.0
+margin_right = 198.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 75, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.133333, 0.243137, 0.4, 1 )
+text = "del 30 Dic"
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="sep3" type="VSeparator" parent="hbox" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 202.0
+margin_right = 206.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="lb_descr" type="Label" parent="hbox" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 210.0
+margin_right = 339.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.133333, 0.243137, 0.4, 1 )
+text = "descrizione"
+valign = 1
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btn_cliente" type="Button" parent="hbox" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 343.0
+margin_right = 493.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 150, 25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = false
+clip_text = true
+align = 0
+script = SubResource( 12 )
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="nome" type="Label" parent="hbox/btn_cliente" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.133333, 0.243137, 0.4, 1 )
+text = "Angela Mariachi"
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin" ]
+
+[node name="sep4" type="VSeparator" parent="hbox" index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 497.0
+margin_right = 501.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="lb_val" type="Label" parent="hbox" index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 505.0
+margin_right = 580.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 75, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.133333, 0.243137, 0.4, 1 )
+text = "8600,00"
+align = 2
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btn_canc" type="TextureButton" parent="hbox" index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 584.0
+margin_right = 609.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 25, 25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+expand = true
+stretch_mode = 3
+script = SubResource( 14 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="btn_ok" type="TextureButton" parent="hbox" index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 613.0
+margin_right = 638.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 25, 25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = SubResource( 15 )
+texture_hover = SubResource( 16 )
+expand = true
+stretch_mode = 3
+script = SubResource( 17 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="btn_annulla" type="TextureButton" parent="hbox" index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 642.0
+margin_right = 667.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 25, 25 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = SubResource( 18 )
+texture_hover = SubResource( 19 )
+expand = true
+stretch_mode = 3
+script = SubResource( 20 )
+_sections_unfolded = [ "Textures" ]
+
+

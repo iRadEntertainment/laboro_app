@@ -1,0 +1,42 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="laboro app"
+run/main_scene="res://finestre/main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+dati="*res://dati.gd"
+utl="*res://utl.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=800
+window/stretch/aspect="expand"
+driver/name="GLES2"
+
+[gdnative]
+
+singletons=[  ]
+
+[importer_defaults]
+
+texture={
+"flags/filter": true,
+"flags/mipmaps": true
+}
+
+[physics_2d]
+
+motion_fix_enabled=true
