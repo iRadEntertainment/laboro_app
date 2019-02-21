@@ -3966,8 +3966,8 @@ func resetta_nuova_voce():
 	$barra_sopra/nuova_voce/cliente.text     = \"\"
 
 func imposta_data_filtri():
-	$barra_sopra/box_filtri/op_mese_da.selected = 6-1
-	$barra_sopra/box_filtri/ed_anno_da.text     = \"2018\"
+	$barra_sopra/box_filtri/op_mese_da.selected = max( 0 , OS.get_date()[\"month\"]-3)
+	$barra_sopra/box_filtri/ed_anno_da.text     = str(OS.get_date()[\"year\"])
 	$barra_sopra/box_filtri/op_mese_a.selected  = OS.get_date()[\"month\"]-1
 	$barra_sopra/box_filtri/ed_anno_a.text      = str(OS.get_date()[\"year\"])
 
@@ -16833,7 +16833,6 @@ color = Color( 0.54698, 0.538902, 0.566667, 0.149176 )
 
 [node name="fin_contabilita" type="Container" parent="barra_centro" index="3"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
